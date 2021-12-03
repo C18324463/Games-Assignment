@@ -1,4 +1,4 @@
 # Assigment-GE
 Games Engines 1 Assignment
 
-The project I would like to do would be a musical visualizer, where you play a song and the colours react to the music in certain ways.
+The project I would like to do would be to build a prodecurally genertaed road with obstacles and you are controlling a car and are trying to avoid the obstacles.

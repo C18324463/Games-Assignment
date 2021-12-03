@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    public float speed = 1;
-    public float rotSpeed = 100f;
+    public float speed = 1f;
+    public float rotSpeed = 50f;
 
     // Start is called before the first frame update
     void Start()

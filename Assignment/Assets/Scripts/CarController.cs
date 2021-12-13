@@ -23,14 +23,12 @@ public class CarController : MonoBehaviour
         transform.Translate(new Vector3(r, 0, c) * Time.deltaTime);
 
         if (Car.transform.position.y < -1) {
-            Debug.Log("Yup");
             Application.LoadLevel("RoadScene");
         }
     }
 
     void OnCollisionEnter (Collision collision) {
         if (collision.gameObject.name == "Cube" || collision.gameObject.name == "Cube (1)" || collision.gameObject.name == "Cube (2)") {
-            Debug.Log("Tops");
             Application.LoadLevel("RoadScene");
         }
     }

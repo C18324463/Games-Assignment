@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Roadgen : MonoBehaviour
+public class RoadGen : MonoBehaviour
 {
     public GameObject[] roadPrefabs;
 

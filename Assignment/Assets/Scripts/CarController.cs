@@ -52,8 +52,12 @@ public class CarController : MonoBehaviour
 
         if (Car.transform.position.z > Cube.transform.position.z || Car.transform.position.z > Cube1.transform.position.z || Car.transform.position.z > Cube2.transform.position.z) {
             score = score + 1;
+            if ((score % 10) == 0) {
+                speed = speed + 0.5f;
+            }
             if (highscore < score) {
                 PlayerPrefs.SetInt(highScoreKey, score);
+                PlayerPrefs.SetInt(lastScoreKey, score);
                 PlayerPrefs.Save();
             } else if (score < highscore) {
                 PlayerPrefs.SetInt(lastScoreKey, score);
@@ -67,6 +71,7 @@ public class CarController : MonoBehaviour
         if (collision.gameObject.name == "Cube" || collision.gameObject.name == "Cube1" || collision.gameObject.name == "Cube2") {
             if (highscore < score) {
                 PlayerPrefs.SetInt(highScoreKey, score);
+                PlayerPrefs.SetInt(lastScoreKey, score);
                 PlayerPrefs.Save();
             } else if (score < highscore) {
                 PlayerPrefs.SetInt(lastScoreKey, score);

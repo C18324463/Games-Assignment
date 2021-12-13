@@ -13,12 +13,12 @@ public class levelgenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(myPrefab, new Vector3(3, 0.5f, 8f), Quaternion.identity);
-        Instantiate(myPrefab, new Vector3(-2, 0.5f, 10f), Quaternion.identity);
+        //Instantiate(myPrefab, new Vector3(3, 0.5f, 8f), Quaternion.identity);
+        /*Instantiate(myPrefab, new Vector3(-2, 0.5f, 10f), Quaternion.identity);
         Instantiate(myPrefab, new Vector3(2.5f, 0.5f, 12f), Quaternion.identity);
         Instantiate(myPrefab, new Vector3(-2, 0.5f, 14f), Quaternion.identity);
         Instantiate(myPrefab, new Vector3(1, 0.5f, 16f), Quaternion.identity);
-        Instantiate(myPrefab, new Vector3(0, 0.5f, 18f), Quaternion.identity);
+        Instantiate(myPrefab, new Vector3(0, 0.5f, 18f), Quaternion.identity);*/
 
     }
 
@@ -32,7 +32,7 @@ public class levelgenerator : MonoBehaviour
             min = 5 + i;
             max = 5 + i + 5;
             float randz = Random.Range(min, max);
-            myPrefab.transform.position = new Vector3(randx, 0, randz);
+            myPrefab.transform.position = new Vector3(randx, 1, randz);
             i++;
         }
     }

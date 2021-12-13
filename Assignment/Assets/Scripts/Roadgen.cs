@@ -41,8 +41,6 @@ public class Roadgen : MonoBehaviour
         zSpawn += roadLength;
     }
 
-
-
     private void DeleteRoad(){
         Destroy(activeRoad[0]);
         activeRoad.RemoveAt(0);

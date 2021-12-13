@@ -9,6 +9,7 @@ public class CarController : MonoBehaviour
     public float rotSpeed = 30f;
     public int score = -1;
     public int highscore = 0;
+    string highScoreKey = "HighScore";
 
     public GameObject Car;
     public GameObject Cube;
@@ -21,7 +22,7 @@ public class CarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.GetInt("High Score");
+        highscore = PlayerPrefs.GetInt(highScoreKey, 0); 
     }
 
     // Update is called once per frame
@@ -34,16 +35,21 @@ public class CarController : MonoBehaviour
         transform.Translate(new Vector3(h, 0, v) * Time.deltaTime);
 
         if (Car.transform.position.y < -1) {
+            if (highscore < score) {
+                PlayerPrefs.SetInt(highScoreKey, score);
+                PlayerPrefs.Save();
+                Debug.Log( "top");
+            }
             Application.LoadLevel("RoadScene");
-            PlayerPrefs.SetInt("High Score", highscore);
         }
 
         if (Car.transform.position.z > Cube.transform.position.z || Car.transform.position.z > Cube1.transform.position.z || Car.transform.position.z > Cube2.transform.position.z) {
             score = score + 1;
             Debug.Log(score);
             if (highscore < score) {
-                highscore = score;
-                Debug.Log(highscore + "top");
+                PlayerPrefs.SetInt(highScoreKey, score);
+                PlayerPrefs.Save();
+                Debug.Log("mid");
             }
         }
 
@@ -51,9 +57,12 @@ public class CarController : MonoBehaviour
 
     void OnCollisionEnter (Collision collision) {
         if (collision.gameObject.name == "Cube" || collision.gameObject.name == "Cube1" || collision.gameObject.name == "Cube2") {
-            highscore = score;
+            if (highscore < score) {
+                PlayerPrefs.SetInt(highScoreKey, score);
+                PlayerPrefs.Save();
+                Debug.Log( "top");
+            }
             Application.LoadLevel("RoadScene");
-            //highscore = score;
         }
     }
 }

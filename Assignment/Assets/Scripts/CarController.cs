@@ -38,18 +38,15 @@ public class CarController : MonoBehaviour
             if (highscore < score) {
                 PlayerPrefs.SetInt(highScoreKey, score);
                 PlayerPrefs.Save();
-                Debug.Log( "top");
             }
             Application.LoadLevel("RoadScene");
         }
 
         if (Car.transform.position.z > Cube.transform.position.z || Car.transform.position.z > Cube1.transform.position.z || Car.transform.position.z > Cube2.transform.position.z) {
             score = score + 1;
-            Debug.Log(score);
             if (highscore < score) {
                 PlayerPrefs.SetInt(highScoreKey, score);
                 PlayerPrefs.Save();
-                Debug.Log("mid");
             }
         }
 
@@ -60,7 +57,6 @@ public class CarController : MonoBehaviour
             if (highscore < score) {
                 PlayerPrefs.SetInt(highScoreKey, score);
                 PlayerPrefs.Save();
-                Debug.Log( "top");
             }
             Application.LoadLevel("RoadScene");
         }

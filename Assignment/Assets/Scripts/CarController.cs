@@ -32,9 +32,9 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        word1.text = "CURRENT SCORE:" + score;
-        word2.text = "HIGHSCORE:" + highscore;
-        word3.text = "LAST SCORE:" + lastscore;
+        word1.text = "CURRENT SCORE: " + score;
+        word2.text = "HIGHSCORE: " + highscore;
+        word3.text = "LAST SCORE: " + lastscore;
         float v = Input.GetAxis("Vertical") * speed;
         float h = Input.GetAxis("Horizontal") * speed;
         transform.Translate(new Vector3(h, 0, v) * Time.deltaTime);

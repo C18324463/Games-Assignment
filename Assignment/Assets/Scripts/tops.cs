@@ -23,8 +23,8 @@ public class tops : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if ((car.transform.position.z - 30) > (myPrefab.transform.position.z - 10)) {
-            float min = 3.5f;
+        if (car.transform.position.z > myPrefab.transform.position.z) {
+            float min = -1.1f;
             float max = -3.5f;
             float randx = Random.Range(min, max);
             min = 5 + i;

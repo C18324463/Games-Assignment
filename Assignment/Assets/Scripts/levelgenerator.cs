@@ -23,9 +23,9 @@ public class levelgenerator : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if ((car.transform.position.z - 30) > (myPrefab.transform.position.z - 10)) {
-            float min = 3.5f;
-            float max = -3.5f;
+        if (car.transform.position.z > myPrefab.transform.position.z) {
+            float min = 1f;
+            float max = -1f;
             float randx = Random.Range(min, max);
             min = 5 + i;
             max = 5 + i + 5;

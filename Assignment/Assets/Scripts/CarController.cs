@@ -20,6 +20,7 @@ public class CarController : MonoBehaviour
     public Text word1;
     public Text word2;
     public Text word3;
+    public AudioSource crash;
 
 
     // Start is called before the first frame update
@@ -69,6 +70,8 @@ public class CarController : MonoBehaviour
 
     void OnCollisionEnter (Collision collision) {
         if (collision.gameObject.name == "Cube" || collision.gameObject.name == "Cube1" || collision.gameObject.name == "Cube2") {
+            crash.Play();
+            StartCoroutine(Fade());
             if (highscore < score) {
                 PlayerPrefs.SetInt(highScoreKey, score);
                 PlayerPrefs.SetInt(lastScoreKey, score);
@@ -79,5 +82,10 @@ public class CarController : MonoBehaviour
             }
             Application.LoadLevel("RoadScene");
         }
+    }
+
+    IEnumerator Fade()
+    {
+        yield return new WaitForSeconds(5f);
     }
 }

@@ -86,6 +86,7 @@ public class CarController : MonoBehaviour
 
     IEnumerator Fade()
     {
+        Debug.Log("yo");
         yield return new WaitForSeconds(5f);
     }
 }

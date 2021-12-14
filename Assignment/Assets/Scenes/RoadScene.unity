@@ -266,6 +266,7 @@ MonoBehaviour:
   word2: {fileID: 679059364}
   word3: {fileID: 766669870}
   crash: {fileID: 288515904}
+  scream: {fileID: 288515904}
 --- !u!114 &288515903
 MonoBehaviour:
   m_ObjectHideFlags: 0

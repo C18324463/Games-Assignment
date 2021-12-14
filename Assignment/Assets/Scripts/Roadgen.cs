@@ -8,12 +8,13 @@ public class RoadGen : MonoBehaviour
 
     public float zSpawn = 0;
     public float roadLength = 5;
-    public int numOfRoads = 3;
-    // Start is called before the first frame update
+    public int numOfRoads = 2;
+    
     public Transform playerTransform;
 
     private List<GameObject> activeRoad = new List<GameObject>();
 
+    // Start is called before the first frame update
     void Start()
     {
         for(int i=0; i<numOfRoads; i++){

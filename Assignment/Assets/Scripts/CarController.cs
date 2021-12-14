@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CarController : MonoBehaviour
 {
@@ -17,9 +18,9 @@ public class CarController : MonoBehaviour
     public GameObject Cube;
     public GameObject Cube1;
     public GameObject Cube2;
-    public Text word1;
-    public Text word2;
-    public Text word3;
+    public Text current;
+    public Text high;
+    public Text last;
     public AudioSource crash;
     public AudioSource scream;
 
@@ -34,12 +35,12 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        word1.text = "CURRENT SCORE: " + score;
-        word2.text = "HIGHSCORE: " + highscore;
-        word3.text = "LAST SCORE: " + lastscore;
-        float v = Input.GetAxis("Vertical") * speed;
-        float h = Input.GetAxis("Horizontal") * speed;
-        transform.Translate(new Vector3(h, 0, v) * Time.deltaTime);
+        current.text = "CURRENT SCORE: " + score;
+        high.text = "HIGHSCORE: " + highscore;
+        last.text = "LAST SCORE: " + lastscore;
+        float vert = Input.GetAxis("Vertical") * speed;
+        float horiz = Input.GetAxis("Horizontal") * speed;
+        transform.Translate(new Vector3(horiz, 0, vert) * Time.deltaTime);
 
         if (Car.transform.position.y < -1) {
             if (highscore < score) {
@@ -50,7 +51,7 @@ public class CarController : MonoBehaviour
                 PlayerPrefs.SetInt(lastScoreKey, score);
                 PlayerPrefs.Save();
             }
-            Application.LoadLevel("RoadScene");
+            SceneManager.LoadScene("RoadScene");
         }
 
         if (Car.transform.position.z > Cube.transform.position.z || Car.transform.position.z > Cube1.transform.position.z || Car.transform.position.z > Cube2.transform.position.z) {
@@ -87,6 +88,6 @@ public class CarController : MonoBehaviour
                 PlayerPrefs.SetInt(lastScoreKey, score);
                 PlayerPrefs.Save();
             }
-            Application.LoadLevel("RoadScene");
+            SceneManager.LoadScene("RoadScene");
     }
 }

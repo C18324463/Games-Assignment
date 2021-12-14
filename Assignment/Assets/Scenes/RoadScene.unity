@@ -262,9 +262,9 @@ MonoBehaviour:
   Cube: {fileID: 2055696752}
   Cube1: {fileID: 848774313}
   Cube2: {fileID: 501060211}
-  word1: {fileID: 453916655}
-  word2: {fileID: 679059364}
-  word3: {fileID: 766669870}
+  current: {fileID: 453916655}
+  high: {fileID: 679059364}
+  last: {fileID: 766669870}
   crash: {fileID: 288515904}
   scream: {fileID: 288515904}
 --- !u!114 &288515903
@@ -1845,7 +1845,7 @@ MonoBehaviour:
   - {fileID: 636105850}
   zSpawn: 0
   roadLength: 30
-  numOfRoads: 3
+  numOfRoads: 2
   playerTransform: {fileID: 288515900}
 --- !u!1 &1557439312
 GameObject:

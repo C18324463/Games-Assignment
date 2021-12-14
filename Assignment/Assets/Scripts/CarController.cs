@@ -42,8 +42,15 @@ public class CarController : MonoBehaviour
         transform.Translate(new Vector3(h, 0, v) * Time.deltaTime);
 
         if (Car.transform.position.y < -1) {
-            crash.Play();
-            StartCoroutine(Fade());
+            if (highscore < score) {
+                PlayerPrefs.SetInt(highScoreKey, score);
+                PlayerPrefs.SetInt(lastScoreKey, score);
+                PlayerPrefs.Save();
+            } else if (score < highscore) {
+                PlayerPrefs.SetInt(lastScoreKey, score);
+                PlayerPrefs.Save();
+            }
+            Application.LoadLevel("RoadScene");
         }
 
         if (Car.transform.position.z > Cube.transform.position.z || Car.transform.position.z > Cube1.transform.position.z || Car.transform.position.z > Cube2.transform.position.z) {
@@ -60,7 +67,6 @@ public class CarController : MonoBehaviour
                 PlayerPrefs.Save();
             }
         }
-
     }
 
     void OnCollisionEnter (Collision collision) {
@@ -72,9 +78,7 @@ public class CarController : MonoBehaviour
 
     IEnumerator Fade()
     {
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         if (highscore < score) {
                 PlayerPrefs.SetInt(highScoreKey, score);
                 PlayerPrefs.SetInt(lastScoreKey, score);

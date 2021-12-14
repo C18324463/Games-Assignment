@@ -12,12 +12,7 @@ public class Cube1Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Instantiate(Cube, new Vector3(3, 0.5f, 8f), Quaternion.identity);
-        /*Instantiate(Cube, new Vector3(-2, 0.5f, 10f), Quaternion.identity);
-        Instantiate(Cube, new Vector3(2.5f, 0.5f, 12f), Quaternion.identity);
-        Instantiate(Cube, new Vector3(-2, 0.5f, 14f), Quaternion.identity);
-        Instantiate(Cube, new Vector3(1, 0.5f, 16f), Quaternion.identity);
-        Instantiate(Cube, new Vector3(0, 0.5f, 18f), Quaternion.identity);*/
+        
     }
 
     // Update is called once per frame

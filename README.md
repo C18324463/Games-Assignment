@@ -1,12 +1,14 @@
 # Project Title
 
-Name:
+Name: Gabriel Hynes
 
-Student Number: 
+Student Number: C18324463
 
-Class Group:
+Class Group: TU857/DT211C
 
 # Description of the project
+
+When you start my game, you spawn as a car. The objective of the game is to drive the car forward, past the procedurally generating boxes that spawn in random locations when you pass them. For every box you pass, you get 1 point added to your score. Every 10 points you get, the speed of the car increases so the game gets progressively harder. If you hit a box, audio plays a crashing noise and the game ends and you respawn back at the start and your score resets. It displays the score of your last game in the bottom corner. It also displays the highscore. If you fall off the level, you will also respawn back at the start and again, your score resets and the last score you got will display.
 
 # Instructions for use
 

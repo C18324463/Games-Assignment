@@ -1845,7 +1845,7 @@ MonoBehaviour:
   - {fileID: 636105850}
   zSpawn: 0
   roadLength: 30
-  numOfRoads: 2
+  numOfRoads: 3
   playerTransform: {fileID: 288515900}
 --- !u!1 &1557439312
 GameObject:

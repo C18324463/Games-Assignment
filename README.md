@@ -18,21 +18,19 @@ You spawn as a car. To drive forward, you use the up arrow key or the w key. To 
 
 You spawn in as a car. You can move around in all directions, forward, back, left and right. You move up to the start line and when you drive over it, the game begins.
 
-Image 1
 ![start image](https://github.com/C18324463/Games-Assignment/blob/main/Start.JPG)
 
 As you drive past the boxes, your score increases.
 
-Image 2
+![score image](https://github.com/C18324463/Games-Assignment/blob/main/Score1.JPG)
 
 When you reach a score of 10, the speed increases.
 
-Image 3
+![score2 image](https://github.com/C18324463/Games-Assignment/blob/main/Score12.JPG)
 
 When you fall off or hit a box, you respawn bakc at the start and your score resets.
 
-Image 4
-
+![crash image](https://github.com/C18324463/Games-Assignment/blob/main/AfterCrash.JPG)
 
 # List of classes/assets in the project and whether made yourself or modified or if its from a source, please give the reference
 

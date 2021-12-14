@@ -12,7 +12,11 @@ When you start my game, you spawn as a car. The objective of the game is to driv
 
 # Instructions for use
 
+You spawn as a car. To drive forward, you use the up arrow key or the w key. To drive left and right, you use the left and right arrow keys as well as the a and d keys. To go backwards, you use the back arrow key or the s key. The aim of the game is to dodge the boxes driving forwards and try beat the highscore.
+
 # How it works
+
+
 
 # List of classes/assets in the project and whether made yourself or modified or if its from a source, please give the reference
 

@@ -19,7 +19,7 @@ You spawn as a car. To drive forward, you use the up arrow key or the w key. To 
 You spawn in as a car. You can move around in all directions, forward, back, left and right. You move up to the start line and when you drive over it, the game begins.
 
 Image 1
-(https://github.com/C18324463/Games-Assignment/blob/main/Start.JPG)
+![start image](https://github.com/C18324463/Games-Assignment/blob/main/Start.JPG)
 
 As you drive past the boxes, your score increases.
 

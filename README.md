@@ -144,6 +144,8 @@ if (highscore < score) {
 }
 ```
 
+[![YouTube](https://youtu.be/HE6J5yPjY2U)
+
 # List of classes/assets in the project and whether made yourself or modified or if its from a source, please give the reference
 
 | Class/asset | Source |
@@ -235,7 +237,7 @@ This is an image using an absolute URL:
 
 This is a youtube video:
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+[![YouTube](https://youtu.be/HE6J5yPjY2U)
 
 This is a table:
 

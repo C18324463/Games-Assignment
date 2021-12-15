@@ -46,8 +46,15 @@ When you fall off or hit a box, you respawn bakc at the start and your score res
 | CarCrash.wav | [https://www.mediafire.com/file/cd9k5trccmyt9e0/car_crash_SoundEffectsFactory.wav/file]() |
 
 # References
+[https://answers.unity.com/questions/672869/player-prefs-to-store-high-scores.html]()
+[https://answers.unity.com/questions/1818562/how-to-instantiate-road-prefab-at-desired-position-1.html]()
+[https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-skybox-free-18353]()
+[https://www.mediafire.com/file/cd9k5trccmyt9e0/car_crash_SoundEffectsFactory.wav/file]()
+Bryan Duggan
 
 # What I am most proud of in the assignment
+
+I am most proud about my assignment that it actually fully works the way I thought it would work liek from the start. There was a point at the start of the assignment that I didn't actually doing this project would actually be fully completed up to the standard I actually did reach. I am proud that I got the score board working and that it shows the current score, the score you got in the last game and the highscore.
 
 # Proposal submitted earlier can go here:
 

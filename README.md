@@ -53,9 +53,96 @@ When you reach a score of 10, the speed increases.
 
 ![score2 image](https://github.com/C18324463/Games-Assignment/blob/main/Score12.JPG)
 
+```C#
+if (Car.transform.position.z > Cube.transform.position.z || Car.transform.position.z > Cube1.transform.position.z || Car.transform.position.z > Cube2.transform.position.z) {
+    //Adds 1 to your score
+    score = score + 1;
+    //If the score divided by 10 equals 0
+    if ((score % 10) == 0) {
+	//Speed up the vehicle by 0.5 seconds
+	speed = speed + 0.5f;
+    }
+    //If the highscore is lower than the score
+    if (highscore < score) {
+	//Puts score into the highscore key
+	PlayerPrefs.SetInt(highScoreKey, score);
+	//Puts score into the lastscore key
+	PlayerPrefs.SetInt(lastScoreKey, score);
+	//Saves the keys
+	PlayerPrefs.Save();
+    //If score is less than highscore
+    } else if (score < highscore) {
+	//Puts score into the lastscore key
+	PlayerPrefs.SetInt(lastScoreKey, score);
+	//Saves the keys
+	PlayerPrefs.Save();
+    }
+}
+```
+
 When you fall off or hit a box, you respawn bakc at the start and your score resets.
 
 ![crash image](https://github.com/C18324463/Games-Assignment/blob/main/AfterCrash.JPG)
+
+```C#
+if (Car.transform.position.y < -1) {
+    //If the highscore is lower than the score
+    if (highscore < score) {
+	//Puts score into the highscore key
+	PlayerPrefs.SetInt(highScoreKey, score);
+	//Puts score into the lastscore key
+	PlayerPrefs.SetInt(lastScoreKey, score);
+	//Saves the keys
+	PlayerPrefs.Save();
+    //If score is less than highscore
+    } else if (score < highscore) {
+	//Puts score into the lastscore key
+	PlayerPrefs.SetInt(lastScoreKey, score);
+	//Saves the keys
+	PlayerPrefs.Save();
+    }
+    //Resets the scene(respawns the vehicle)
+    SceneManager.LoadScene("RoadScene");
+}
+
+void OnCollisionEnter (Collision collision) {
+//If your vehicle collides with any of the Cubes
+	if (collision.gameObject.name == "Cube" || collision.gameObject.name == "Cube1" || collision.gameObject.name == "Cube2") {
+ 	   //Plays the crash audio
+ 	   crash.Play();
+ 	   //Calls the coroutine
+ 	   StartCoroutine(Noise());
+	}
+}
+```
+
+When you crash into a box, it makes a noise of crashing
+
+```C#
+//IEnumerator
+IEnumerator Noise()
+{
+//Waits 0.5 seconds to allow for sound to play
+yield return new WaitForSeconds(0.5f);
+//If the highscore is lower than the score
+if (highscore < score) {
+	//Puts score into the highscore key
+	PlayerPrefs.SetInt(highScoreKey, score);
+	//Puts score into the lastscore key
+	PlayerPrefs.SetInt(lastScoreKey, score);
+	//Saves the keys
+	PlayerPrefs.Save();
+    //If score is less than highscore
+    } else if (score < highscore) {
+	//Puts score into the lastscore key
+	PlayerPrefs.SetInt(lastScoreKey, score);
+	//Saves the keys
+	PlayerPrefs.Save();
+    }
+    //Resets the scene(respawns the vehicle)
+    SceneManager.LoadScene("RoadScene");
+}
+```
 
 # List of classes/assets in the project and whether made yourself or modified or if its from a source, please give the reference
 

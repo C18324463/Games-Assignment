@@ -36,9 +36,14 @@ When you fall off or hit a box, you respawn bakc at the start and your score res
 
 | Class/asset | Source |
 |-----------|-----------|
-| MyClass.cs | Self written |
-| MyClass1.cs | Modified from [reference]() |
-| MyClass2.cs | From [reference]() |
+| CarController.cs | Modified from [https://answers.unity.com/questions/672869/player-prefs-to-store-high-scores.html]() and Bryan Duggan|
+| CubeScript.cs | Self written |
+| CubeScript1.cs | Self written |
+| CubeScript2.cs | Self written |
+| RoadGen.cs | Modified from [https://answers.unity.com/questions/1818562/how-to-instantiate-road-prefab-at-desired-position-1.html]() |
+| FS000_Night_01.png | [https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-skybox-free-18353]() |
+| Cube.prefab | Self written |
+| CarCrash.wav | [https://www.mediafire.com/file/cd9k5trccmyt9e0/car_crash_SoundEffectsFactory.wav/file]() |
 
 # References
 

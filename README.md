@@ -144,7 +144,7 @@ if (highscore < score) {
 }
 ```
 
-[![YouTube](https://img.youtube.com/HE6J5yPjY2U)](https://github.com/C18324463/Games-Assignment/blob/main/Start.JPG)
+[![YouTube](https://github.com/C18324463/Games-Assignment/blob/main/Start.JPG)](https://www.youtube.com/watch?v=HE6J5yPjY2U)
 
 
 # List of classes/assets in the project and whether made yourself or modified or if its from a source, please give the reference

@@ -1,5 +1,7 @@
 # Project Title
 
+Box Dodgers
+
 Name: Gabriel Hynes
 
 Student Number: C18324463
@@ -19,6 +21,29 @@ You spawn as a car. To drive forward, you use the up arrow key or the w key. To 
 You spawn in as a car. You can move around in all directions, forward, back, left and right. You move up to the start line and when you drive over it, the game begins.
 
 ![start image](https://github.com/C18324463/Games-Assignment/blob/main/Start.JPG)
+
+```C#
+private void Update()
+    {
+        //If cars z position is greater than cubes z position
+        if (Car.transform.position.z > Cube.transform.position.z) {
+            //Set the max and min for the cubes spawning location
+            float min = 1.5f;
+            float max = -1.5f;
+            //Puts them into a random x variable
+            float randomx = Random.Range(min, max);
+            //Adds 5 and i to the min and max to keep to moving
+            min = 5 + i;
+            max = 5 + i + 5;
+            //Puts them into a random z variable
+            float randomz = Random.Range(min, max);
+            //Cubes position randomly spawns within the area
+            Cube.transform.position = new Vector3(randomx, 0.5f, (randomz + 5));
+            //Adds 5 to i
+            i = i + 5;
+        }
+    }
+```
 
 As you drive past the boxes, your score increases.
 
